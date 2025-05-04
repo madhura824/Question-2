@@ -1,0 +1,33 @@
+Data Sets Used: 
+
+trips.txt
+
+primary key: (trip_id)
+foreign key: (route_id)
+
+route_id,service_id,trip_id,trip_headsign,block_id
+
+-----------------------------------------------------------------------------------------------------------------
+
+stop_times.txt
+
+primary key: (trip_id, stop_sequence)
+
+trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type
+
+-----------------------------------------------------------------------------------------------------------------
+Assumptions:
+
+in trips as the trip_id is the only primary key and the route_id is the foreign key  this means that the trip id is fully independent in the sense if identifying the route_id from the routes.txt
+
+1) trip_id in trips.txt must be globally unique across all routes.
+2)  trips can be in forward and reverse sequence
+
+Facts:
+
+every trip is associated to a single route.
+
+
+Problem Statement:
+ 
+Find the cross route journeys direct path, one transit, 2 transit
